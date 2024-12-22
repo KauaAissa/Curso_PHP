@@ -48,6 +48,7 @@ Este repositório contém os exercícios e projetos realizados durante o curso. 
 Matheus Battisti - Equipe Hora de Codar.
 
 [Perfil do Instrutor no Github](https://github.com/matheusbattisti)
+
 [Perfil do Instrutor na Udemy](https://www.udemy.com/user/matheus-battisti/)
 
 ---
