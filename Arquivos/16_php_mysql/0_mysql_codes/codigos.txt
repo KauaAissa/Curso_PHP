@@ -1,0 +1,147 @@
+*1. Criando Banco de Dados*
+
+CREATE DATABASE Teste;
+
+*2. Excluindo Banco de Dados*
+
+DROP DATABASE Teste;
+
+*3. Tipos de Dados*
+
+VARCHAR - Texto
+TEXT - Maiores textos
+INT - Numeros inteiros
+BIGINT - Maior proporção que INT
+DATE - Data no formato YYYY/MM-DD
+
+*4. Criando Tabelas*
+
+CREATE DATABASE cursophp;
+USE cursophp;
+
+CREATE TABLE pessoas(
+    nome VARCHAR(200),
+    idade INT
+);
+
+CREATE TABLE carros(
+    marca VARCHAR(100),
+    descricao TEXT,
+    ano_fabricacao INT
+);
+
+*5. Excluindo Tabelas*
+
+CREATE TABLE teste(
+    teste DATE
+);
+
+DROP TABLE teste;
+
+*6. Modificando Tabelas*
+
+ALTER TABLE carros
+ADD motor INT;
+
+ALTER TABLE carros
+DROP ano_fabricacao;
+
+
+ALTER TABLE carros
+MODIFY COLUMN descricao VARCHAR(500);
+
+*7. Constraint: NOT NULL*
+
+SET @@GLOBAL.SQL_MODE = 'STRICT_ALL_TABLES';
+
+CREATE TABLE notnull(
+    nome VARCHAR(100) NOT NULL,
+    idade INT
+);
+
+INSERT INTO notnull (idade) values(50);
+INSERT INTO notnull (nome, idade) values("Kaua", 50);
+INSERT INTO notnull (nome) values("kaua");
+
+*8. Constraint: UNIQUE*
+
+CREATE TABLE mailmarketing(
+    email VARCHAR(255) NOT NULL UNIQUE,
+    nome VARCHAR(255)
+);
+INSERT INTO mailmarketing(email, nome) values("kaua@teste.com", "Kaua");
+INSERT INTO mailmarketing(email, nome) values("kaua@teste.com", "jose");
+
+*9. Constraint: PRIMARY KEY*
+
+CREATE TABLE itens (
+    id INT USIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    descricao TEXT
+);
+
+INSERT INTO itens(nome, descricao) VALUES("abajur", "Novo");
+INSERT INTO itens(nome, descricao) VALUES("Caneta", "Bic");
+
+*10. Inserindo dados*
+
+INSERT INTO itens (nome, descricao) VALUES ('Teclado', "Telado da Microsoft");
+
+INSERT INTO itens (nome, descricao) VALUES ('Mouse', "O mouse está usado");
+
+*11. Selecionando dados*
+
+SELECT * FROM itens;
+
+SELECT nome FROM itens;
+
+*12. Where*
+
+SELECT * FROM itens WHERE nome = "Abajur";
+
+SELECT nome FROM itens WHERE id > 3;
+
+SELECT id, nome FROM itens WHERE id <= 3;
+
+*12. Utilizando condicionais AND, OR e NOT*
+
+SELECT * FROM itens WHERE id = 2 OR id = 5;
+
+SELECT * FROM itens WHERE nome = Abajur AND id = 8;
+
+SELECT * FROM itens WHERE nome = Abajur or id > 5;
+
+*12. ORDER BY*
+
+SELECT * FROM itens ORDER BY id DESC;
+
+SELECT * FROM itens WHERE id > 2 ORDER BY nome DESC;
+
+*12. Atualizando dados UPDATE*
+
+UPDATE itens
+SET nome = "Abajur Novo"
+WHERE id = 8;
+
+UPDATE itens
+SET nome = "Abajur muito novo",
+descricao = "Este abajur é muito novo, raro e veio da china"
+WHERE id = 8;
+
+*12. Deletando dados DELETE*
+
+DELETE FROM itens
+WHERE id = 6;
+
+*12. Criando usuarios*
+
+SELECT * FROM mysql.user;
+
+CREATE USER 'kaua'@'localhost' IDENTIFIED BY 'teste123';
+GRANT ALL PRIVILEGES ON *.* TO 'kaua'@'localhost';
+FLUSH PRIVILEGES;
+
+
+
+
+
