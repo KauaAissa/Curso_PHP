@@ -37,6 +37,8 @@ Durante o curso, trabalhei em vários projetos práticos, que me ajudaram a apli
 - **JavaScript** (quando necessário)
 - **VS Code** (ambiente de desenvolvimento)
 
+[![My Front-end Skills](https://skillicons.dev/icons?i=php,mysql,html,css,bootstrap,js,vscode,&perline=13)](#)
+
 ## Como Acompanhar
 
 Este repositório contém os exercícios e projetos realizados durante o curso. Para acessar o curso completo, você pode se inscrever através do link abaixo:
