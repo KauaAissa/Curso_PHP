@@ -45,6 +45,12 @@ Este repositório contém os exercícios e projetos realizados durante o curso. 
 
 [PHP - Do Zero à Maestria na Udemy](https://www.udemy.com/course/php-do-zero-a-maestria-com-projetos-incriveis/?couponCode=KEEPLEARNINGBR)
 
+## Certificado
+
+Aqui está o certificado de conclusão do curso:
+
+<img src="/assets/curso_php.jpg" alt="Certificado do Curso" width="600">
+
 ## Autor
 
 Matheus Battisti - Equipe Hora de Codar.
